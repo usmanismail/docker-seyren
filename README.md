@@ -1,7 +1,7 @@
 docker-seyren
 =============
 
-A dockerized Seyren Container
+A dockerized [Seyren](https://github.com/scobal/seyren) Container
 
 ## Usage
 
