@@ -12,4 +12,8 @@ export MONGO_URL=mongodb://$MONGODB_PORT_27017_TCP_ADDR:$MONGODB_PORT_27017_TCP_
 echo "Graphite URL $GRAPHITE_URL"
 echo "Mongo URL $MONGO_URL"
 
-java -jar /opt/seyren.jar
+env
+
+java -jar /opt/seyren.jar &
+
+bash
