@@ -10,7 +10,7 @@ A dockerized [Seyren](https://github.com/scobal/seyren) Container
 docker run -d --name mongodb dockerfile/mongodb
 
 # Run Seyren and link MongoDB
-docker run -d -p 8080:8080 --name seyren --link mongodb:mongodb -i -t usman/docker-seyren http://[GRAPHITE_URL]
+docker run -d -p 8080:8080 --name seyren --link mongodb:mongodb -i -t usman/docker-seyren:1.2.0 http://[GRAPHITE_URL]
 ```
 Then point your browser at [http://localhost:8080/](http://localhost:8080/)
 
