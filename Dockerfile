@@ -4,7 +4,7 @@ MAINTAINER Usman Ismail "usman@techtraits.com"
 RUN apt-get update && apt-get clean
 RUN apt-get install -q -y openjdk-7-jre-headless && apt-get clean
 
-ADD https://github.com/scobal/seyren/releases/download/1.1.0/seyren-1.1.0.jar /opt/seyren.jar
+ADD https://github.com/scobal/seyren/releases/download/1.2.0/seyren-1.2.0.jar /opt/seyren.jar
 ADD run-seyren.sh /usr/bin/run-seyren.sh
 RUN chmod +x /usr/bin/run-seyren.sh
 
