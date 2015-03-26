@@ -1,0 +1,19 @@
+mongodb:
+  image: dockerfile/mongodb
+  volumes:
+     - ./mongodb:/data/db
+  command: "mongod --smallfiles"
+
+seyren:
+  build: .
+  ports:
+    - "8080:8080"
+  links:
+    - mongodb
+  env_file:
+    - ./.env
+  environment:
+    - SEYREN_LOG_PATH=/var/log/seyren/
+    - SEYREN_URL
+  volumes:
+    - ./logs:/var/log/seyren
