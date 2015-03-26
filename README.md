@@ -10,7 +10,11 @@ A dockerized [Seyren](https://github.com/scobal/seyren) Container
 docker run -d --name mongodb dockerfile/mongodb
 
 # Run Seyren and link MongoDB
-docker run -d -p 8080:8080 --name seyren --link mongodb:mongodb -i -t usman/docker-seyren http://[GRAPHITE_URL]
+docker run -d -p 8080:8080 --name seyren --link mongodb:mongodb -it usman/docker-seyren http://[GRAPHITE_URL]
+
+# Run Seyren and link MongoDB using environment variable for graphite URL
+docker run -d -p 8080:8080 --name seyren --link mongodb:mongodb -e GRAPHITE_URL=http://[GRAPHITE_URL] -it usman/docker-seyren
+
 
 # Run a specific version of Seyren, VERSION can be 1.1.0 or 1.2.0
 docker run -d -p 8080:8080 --name seyren --link mongodb:mongodb -i -t usman/docker-seyren:[VERSION] http://[GRAPHITE_URL]
