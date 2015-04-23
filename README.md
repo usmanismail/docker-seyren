@@ -6,6 +6,9 @@ A dockerized [Seyren](https://github.com/scobal/seyren) Container
 ## Usage
 
 ```
+# Pull the Mongo repo
+docker pull mongo
+
 # Run MongoDB
 docker run -d --name mongodb dockerfile/mongodb
 
