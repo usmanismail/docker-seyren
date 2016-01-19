@@ -7,7 +7,7 @@ A dockerized [Seyren](https://github.com/scobal/seyren) Container
 
 ```
 # Run MongoDB
-docker run -d --name mongodb mongo
+docker run -d --name mongodb mongo:3.0.1
 
 # Run Seyren and link MongoDB
 docker run -d -p 8080:8080 --name seyren --link mongodb:mongodb -it usman/docker-seyren http://[GRAPHITE_URL]
